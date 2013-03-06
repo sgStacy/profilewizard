@@ -446,6 +446,7 @@ class ProfileController < ApplicationController
         h1 = doc.at_css "Profile"
         h1["xmlns"] = 'http://soap.sforce.com/2006/04/metadata'
 
+        # write contents
         io.puts doc.to_xml
 
       end
