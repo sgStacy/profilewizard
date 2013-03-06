@@ -1,0 +1,52 @@
+<form method="post" action="/profile/update_files" class="button_to" data-remote="true" id="index_form" name="index_form">
+      <div class="validation-error" id="message_div" align="center">
+      </div>
+      <div class="container">
+        <div class="page-header">
+          <div id="loader_image" style="display:none;" align="center">
+            <%= image_tag "ajax-loader.gif" %>
+            <br/><br/>
+          </div>
+          <div class="well">
+            <div class="drag-mask" data-ds-form="select"></div>
+            <div class="row">
+              <div class="span4">
+                <label>Select an object:</label>
+              </div>
+              <div class="span7">
+                <%if @custom_object == nil %>
+                    <%= select_tag "custom_objects", options_for_select(@custom_objects.sort! { |a,b| a <=> b }) %>
+                <%else%>
+                    <%= select_tag "custom_objects", options_for_select(@custom_objects.sort! { |a,b| a <=> b }, :selected => @custom_object) %>
+                <%end%>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <%= submit_tag "Update Values", :name => 'update', :class => "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+          <div id="buttons">
+            <%=render :partial => "buttons" %>
+          </div>
+        </div>
+        <table class="table table-condensed table-striped table-hover table-bordered">
+          <thead>
+          <tr>
+            <th align="center">Read</th>
+            <th align="center">Edit</th>
+            <th align="center">Create</th>
+            <th align="center">Delete</th>
+            <th align="center">View All</th>
+            <th align="center">Modify All</th>
+            <th width="50%">Profile</th>
+          </tr>
+          </thead>
+          <tbody id="profile_list">
+          <%=render :partial => "permission_settings" %>
+          </tbody>
+          </tbody>
+        </table>
+        <div class="row"></div>
+        <div class="row"></div>
+      </div>
+      <%= hidden_field_tag(:values, @profiles) %>
+    </form>

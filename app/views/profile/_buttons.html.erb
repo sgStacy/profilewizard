@@ -1,0 +1,6 @@
+<%if @custom_object != nil%>
+    <hr/>
+    <%= submit_tag "Download Files", :name => 'download',:class => "btn btn-primary" %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= submit_tag "Deploy", :name => 'deploy', :class => "btn btn-primary" %>
+<%end%>

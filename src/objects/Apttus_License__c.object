@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>No_of_Admin_Licenses_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label># of Admin Licenses Assigned</label>
+        <summaryFilterItems>
+            <field>Apttus_License_Tracking__c.License_Type__c</field>
+            <operation>equals</operation>
+            <value>Admin</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Apttus_License_Tracking__c.Apttus_License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Admin_Licenses_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Admin_Licenses__c - No_of_Admin_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Admin Licenses Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Admin_Licenses__c</fullName>
+        <externalId>false</externalId>
+        <label># of Admin Licenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Author_Licenses_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label># of Author Licenses Assigned</label>
+        <summaryFilterItems>
+            <field>Apttus_License_Tracking__c.License_Type__c</field>
+            <operation>equals</operation>
+            <value>Author</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Apttus_License_Tracking__c.Apttus_License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Author_Licenses_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Author_Licenses__c - No_of_Author_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Author Licenses Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Author_Licenses__c</fullName>
+        <externalId>false</externalId>
+        <label># of Author Licenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Comply_License_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Comply_Licenses__c - No_of_Comply_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Comply License Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Comply_Licenses_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label># of Comply Licenses Assigned</label>
+        <summaryFilterItems>
+            <field>Apttus_License_Tracking__c.License_Type__c</field>
+            <operation>equals</operation>
+            <value>Comply</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Apttus_License_Tracking__c.Apttus_License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Comply_Licenses__c</fullName>
+        <externalId>false</externalId>
+        <label># of Comply Licenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Read_Only_Licenses_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label># of Read Only Licenses Assigned</label>
+        <summaryFilterItems>
+            <field>Apttus_License_Tracking__c.License_Type__c</field>
+            <operation>equals</operation>
+            <value>Read Only</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Apttus_License_Tracking__c.Apttus_License__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Read_Only_Licenses_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Read_Only_Licenses__c - No_of_Read_Only_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Read Only Licenses Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Read_Only_Licenses__c</fullName>
+        <externalId>false</externalId>
+        <label># of Read Only Licenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Cost_of_Admin_Licenses_per_month__c</fullName>
+        <description>This sum is the total cost of all 7 Admin Licenses that we currently hold.</description>
+        <externalId>false</externalId>
+        <label>Total Cost of Admin Licenses per month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cost_of_Author_Licenses_per_month__c</fullName>
+        <description>This is the total cost of 22 Author licenses that we currently have.</description>
+        <externalId>false</externalId>
+        <label>Total Cost of Author Licenses per month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cost_of_Comply_Licenses_per_month__c</fullName>
+        <description>This is the total cost of 3 Comply licenses that we currently have.</description>
+        <externalId>false</externalId>
+        <label>Total Cost of Comply Licenses per month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cost_of_R_O_Licenses_per_month__c</fullName>
+        <description>This is the total cost of 53 Read Only licenses that we currently have.</description>
+        <externalId>false</externalId>
+        <label>Total Cost of R/O Licenses per month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Licenses_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Admin_Licenses_Assigned__c + No_of_Comply_Licenses_Assigned__c+ No_of_Author_Licenses_Assigned__c+ No_of_Read_Only_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Licenses Assigned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Licenses_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_of_Licenses__c - Total_Licenses_Assigned__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Licenses Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_cost_SG_pays_for_All_licenses_mo__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Cost_of_Admin_Licenses_per_month__c  +  Total_Cost_of_Author_Licenses_per_month__c  +  Total_Cost_of_Comply_Licenses_per_month__c  +  Total_Cost_of_R_O_Licenses_per_month__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total cost SG pays for All licenses/mo</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_of_Licenses__c</fullName>
+        <externalId>false</externalId>
+        <formula>No_of_Admin_Licenses__c + No_of_Comply_Licenses__c+ No_of_Author_Licenses__c+ No_of_Read_Only_Licenses__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total # of Licenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Apttus License</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AL-{0}</displayFormat>
+        <label>Apttus License Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Apttus Licenses</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,24 @@
+<form method="post" action="/profile/login" class="button_to" data-remote="true" id="login_form" name="login_form">
+  <div class="container" id="login_div">
+    <div class="hero-unit hidden-phone">
+      <h1>Welcome to the Profile Wizard!</h1>
+      <p>We do amazing things that will make you want to give us money. Lots of
+        money.</p>
+      <label>Username</label>
+      <input type="text" class="input-medium" id="username" name="username">
+      <label>Password</label>
+
+      <%= password_field_tag 'password', :class => "input-medium" %>
+      <label>Security Token</label>
+      <input type="text" class="input-medium" id="security_token" name="security_token">
+      <label>Host</label>
+      <select id="host" name="host">
+        <option>Sandbox</option>
+        <option>Production</option>
+      </select>
+      <p></p>
+      <%= submit_tag "Sign Up Today!", :name => 'update', :class => "btn btn-success btn-large" %>
+    </div>
+    <div class="row main-features"></div>
+  </div>
+</form>
