@@ -24,7 +24,7 @@ class ProfileController < ApplicationController
       config.host = session["host"]
     end
 
-    Metaforce.configuration.log = false
+    #Metaforce.configuration.log = false
 
     client = Metaforce.new :username => session["username"],
                            :password => session["password"],
@@ -87,7 +87,7 @@ class ProfileController < ApplicationController
       config.host = session["host"]
     end
 
-    Metaforce.configuration.log = false
+    #Metaforce.configuration.log = false
 
     client = Metaforce.new :username => session["username"],
                            :password => session["password"],
