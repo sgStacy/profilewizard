@@ -306,7 +306,10 @@ class ProfileController < ApplicationController
     # Create the object file
     f = File.open('./' + file_object_path + @custom_object + ".object", "w")
 
-    f.puts @file_hash[params[:file_hash]]
+    f.puts @file_hash[@custom_object + ".object"]
+
+    puts 'object file values'
+    puts @file_hash[@custom_object + ".object"]
 
     f.close
 
@@ -321,14 +324,14 @@ class ProfileController < ApplicationController
       config.host = session["host"]
     end
 
-    Metaforce.configuration.log = false
+    #Metaforce.configuration.log = false
 
     client = Metaforce.new :username => session["username"],
                            :password => session["password"],
                            :security_token => session["security_token"],
                            :host => session["host"]
 
-    client.deploy(File.expand_path('./' + session["username"]))
+    client.deploy(File.expand_path('./' + session["username"]), {rollbackOnError: true, performRetrieve: false, allowMissingFiles: true})
     .on_complete { |job| puts "Finished deploy #{job.id}!" }
     .on_error    { |job| puts "Something bad happened!" }
     .on_poll     {
