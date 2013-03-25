@@ -73,6 +73,8 @@ $('#index_form')
     .bind("ajax:error", function(evt, xhr, status, error){
 
         alert('error');
+        alert(status);
+        alert(error);
         var $form = $(this),
             errors,
             errorText;
