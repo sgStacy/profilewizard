@@ -1,3 +1,12 @@
+<tr>
+  <td><input type="checkbox" class="checkall" id="checkall_read">&nbsp;&nbsp;All</td>
+  <td><input type="checkbox" class="checkall" id="checkall_edit">&nbsp;&nbsp;All</td>
+  <td><input type="checkbox" class="checkall" id="checkall_create">&nbsp;&nbsp;All</td>
+  <td><input type="checkbox" class="checkall" id="checkall_delete">&nbsp;&nbsp;All</td>
+  <td><input type="checkbox" class="checkall" id="checkall_view_all">&nbsp;&nbsp;All</td>
+  <td><input type="checkbox" class="checkall" id="checkall_modify_all">&nbsp;&nbsp;All</td>
+  <td></td>
+</tr>
 <%
    @profiles.each do |profile|
 %>
@@ -14,70 +23,71 @@ doc = Nokogiri::XML(file_contents)
 doc.remove_namespaces!
 end
 %>
-<tr>
+
+   <tr>
   <td align="center">
     <%if @custom_object == nil%>
-        <%=check_box("read", file_name, {}, "yes", "no")%>
+        <%=check_box("read", file_name, {:class => 'read'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/allowRead").text == 'true'%>
-            <%=check_box("read", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("read", file_name, {:checked => 'checked', :class => 'read'}, "yes", "no")%>
         <%else%>
-            <%=check_box("read", file_name, {}, "yes", "no")%>
+            <%=check_box("read", file_name, {:class => 'read'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
-  <td align="center">
+  <td align="center" class="edit">
     <%if @custom_object == nil%>
-        <%=check_box("edit", file_name, {}, "yes", "no")%>
+        <%=check_box("edit", file_name, {:class => 'edit'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/allowEdit").text == 'true'%>
-            <%=check_box("edit", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("edit", file_name, {:checked => 'checked', :class => 'edit'}, "yes", "no")%>
         <%else%>
-            <%=check_box("edit", file_name, {}, "yes", "no")%>
+            <%=check_box("edit", file_name, {:class => 'edit'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
-  <td align="center">
+  <td align="center" class="create">
     <%if @custom_object == nil%>
-        <%=check_box("create", file_name, {}, "yes", "no")%>
+        <%=check_box("create", file_name, {:class => 'create'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/allowCreate").text == 'true'%>
-            <%=check_box("create", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("create", file_name, {:checked => 'checked', :class => 'create'}, "yes", "no")%>
         <%else%>
-            <%=check_box("create", file_name, {}, "yes", "no")%>
+            <%=check_box("create", file_name, {:class => 'create'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
-  <td align="center">
+  <td align="center" class="delete">
     <%if @custom_object == nil%>
-        <%=check_box("delete", file_name, {}, "yes", "no")%>
+        <%=check_box("delete", file_name, {:class => 'delete'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/allowDelete").text == 'true'%>
-            <%=check_box("delete", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("delete", file_name, {:checked => 'checked', :class => 'delete'}, "yes", "no")%>
         <%else%>
-            <%=check_box("delete", file_name, {}, "yes", "no")%>
+            <%=check_box("delete", file_name, {:class => 'delete'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
-  <td align="center">
+  <td align="center" class="view_all">
     <%if @custom_object == nil%>
-        <%=check_box("view_all", file_name, {}, "yes", "no")%>
+        <%=check_box("view_all", file_name, {:class => 'view_all'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/viewAllRecords").text == 'true'%>
-            <%=check_box("view_all", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("view_all", file_name, {:checked => 'checked', :class => 'view_all'}, "yes", "no")%>
         <%else%>
-            <%=check_box("view_all", file_name, {}, "yes", "no")%>
+            <%=check_box("view_all", file_name, {:class => 'view_all'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
-  <td align="center">
+  <td align="center" class="modify_all">
     <%if @custom_object == nil%>
-        <%=check_box("modify_all", file_name, {}, "yes", "no")%>
+        <%=check_box("modify_all", file_name, {:class => 'modify_all'}, "yes", "no")%>
     <%else%>
         <%if doc.xpath("//Profile/objectPermissions/modifyAllRecords").text == 'true'%>
-            <%=check_box("modify_all", file_name, {:checked => 'checked'}, "yes", "no")%>
+            <%=check_box("modify_all", file_name, {:checked => 'checked', :class => 'modify_all'}, "yes", "no")%>
         <%else%>
-            <%=check_box("modify_all", file_name, {}, "yes", "no")%>
+            <%=check_box("modify_all", file_name, {:class => 'modify_all'}, "yes", "no")%>
         <%end%>
     <%end%>
   </td>
