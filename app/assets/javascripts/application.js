@@ -15,6 +15,17 @@
 //= require_tree .
 
 $(document).ready(function(){
+
+$(".checkall").click(function(){
+
+    var status = $(this).prop("checked");
+
+    var className = this.id.replace('checkall_', '');
+    className = '.' + className;
+
+    $(className).each(function(){this.checked = status;});
+});
+
 $('#index_form')
     .bind("ajax:beforeSend", function(evt, xhr, settings){
 
@@ -102,3 +113,4 @@ $('#index_form')
         $form.find('div.validation-error').html(errorText);
     });
 });
+
