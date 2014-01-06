@@ -141,11 +141,7 @@ class ProfileController < ApplicationController
 
 
 =begin
-          connection = Fog::Storage.new({
-                                            provider: 'AWS',
-                                            aws_access_key_id: 'AKIAJ3KTLH5K75R2XTCQ',
-                                            aws_secret_access_key: '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'
-                                        })
+
 
 
         # Create the Array
